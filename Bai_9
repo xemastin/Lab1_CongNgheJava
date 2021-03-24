@@ -1,0 +1,19 @@
+		ArrayList<Integer> list = new ArrayList<Integer>();
+
+		for (int i = 0; i < 15; i++) {
+			list.add(i);
+		}
+
+		Collections.shuffle(list);
+		System.out.print("Id        |");
+		for (int i = 0; list.size() > i; i++)
+			System.out.print("   " + ((i < 10) ? "0" : "") + i);
+
+		System.out.print("\nContactee |");
+		for (int i = 0; list.size() > i; i++)
+			System.out.print("   " + ((list.get(i) < 10) ? "0" : "") + list.get(i));
+		int x = 0;
+		System.out.print("\nThe following citizens: ");
+		for (int i = 0; 5 > i; i++) {
+			System.out.print(x + "   ");
+			x = list.get(x);
